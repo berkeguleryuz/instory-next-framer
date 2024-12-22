@@ -57,35 +57,35 @@ const Newsletter = () => {
             className="bg-white/10 p-8 rounded-lg backdrop-blur-lg">
             <FaEnvelope className="w-12 h-12 text-white mb-6 mx-auto" />
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">
-              Subscribe to Our Waitinglist
+              Subscribe to Our Waiting List
             </h3>
             <p className="text-white/80 mb-6 text-center">
               Get magical updates, special offers, and enchanting stories
               delivered right to your inbox!
             </p>
-            <form onSubmit={handleSubmit} className="flex gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="bg-white text-[#0d0b2d] px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors disabled:opacity-50">
-                {status === "loading" ? "Subscribing..." : "Subscribe"}
-              </button>
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              <div className="flex flex-col space-y-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="w-full bg-white text-[#0d0b2d] px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors disabled:opacity-50">
+                  {status === "loading" ? "Subscribing..." : "Subscribe"}
+                </button>
+              </div>
             </form>
             {status === "success" && (
-              <p className="mt-2 text-green-400">Successfully subscribed!</p>
+              <p className="mt-4 text-green-400 text-center">Successfully subscribed!</p>
             )}
             {status === "error" && (
-              <p className="mt-2 text-red-400">
-                Failed to subscribe. Please try again.
-              </p>
+              <p className="mt-4 text-red-400 text-center">Failed to subscribe. Please try again.</p>
             )}
           </motion.div>
         </div>

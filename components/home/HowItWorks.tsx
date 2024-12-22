@@ -24,7 +24,7 @@ const HowItWorks = () => {
           className="max-w-4xl mx-auto h-[400px] relative"
         >
           <video
-            src="/hero/storyvideo.mp4"
+            src="/1.mp4"
             autoPlay
             loop
             muted

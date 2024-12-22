@@ -37,10 +37,10 @@ const CyclingImages = () => {
           transition={{ duration: 0.5 }}
         >
           <Image
-            src={`/hero/${currentImage}.avif`}
+            src={`/image${currentImage}.webp`}
             alt={`Hero image ${currentImage}`}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover rounded-3xl"
             priority
           />
         </motion.div>

@@ -7,8 +7,7 @@ const WhyInstory = () => {
   return (
     <section
       id="why-love"
-      className="min-h-[70vh] py-24 bg-white relative overflow-hidden"
-    >
+      className="min-h-[70vh] py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0d0b2d] tracking-tight">
@@ -21,8 +20,7 @@ const WhyInstory = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="p-8 rounded-lg bg-gray-50 shadow-lg"
-          >
+            className="p-8 rounded-lg bg-gray-50 shadow-lg">
             <FaMagic className="w-12 h-12 text-[#0d0b2d] mb-6" />
             <h3 className="text-xl font-semibold text-[#0d0b2d] mb-4">
               Convenience at Your Fingertips
@@ -37,8 +35,7 @@ const WhyInstory = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-8 rounded-lg bg-gray-50 shadow-lg"
-          >
+            className="p-8 rounded-lg bg-gray-50 shadow-lg">
             <FaWallet className="w-12 h-12 text-[#0d0b2d] mb-6" />
             <h3 className="text-xl font-semibold text-[#0d0b2d] mb-4">
               Affordable Adventures
@@ -53,8 +50,7 @@ const WhyInstory = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-8 rounded-lg bg-gray-50 shadow-lg"
-          >
+            className="p-8 rounded-lg bg-gray-50 shadow-lg">
             <FaClock className="w-12 h-12 text-[#0d0b2d] mb-6" />
             <h3 className="text-xl font-semibold text-[#0d0b2d] mb-4">
               Stress-Free Storytelling
@@ -65,6 +61,20 @@ const WhyInstory = () => {
             </p>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto h-[400px] relative mt-16">
+          <video
+            src="/2.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </motion.div>
       </div>
     </section>
   );

@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const featureItems = [
   {
-    icon: "/hero/r1.avif",
+    icon: "/1.webp",
     title: "Personalized Adventures",
     description:
       "Each story is crafted just for your child, with their name, age, and interests woven into the narrative.",
   },
   {
-    icon: "/hero/r2.avif",
+    icon: "/2.webp",
     title: "AI-Powered Magic",
     description:
       "Our intelligent app generates fresh, engaging stories every day, ensuring bedtime is never boring.  ",
   },
   {
-    icon: "/hero/r3.avif",
+    icon: "/3.webp",
     title: "Your Voice, Their Hero",
     description:
       "With our voice cloning feature, your child can hear their bedtime story narrated in your own voice, even when you're busy.",
@@ -36,14 +36,13 @@ const Features = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-blue-50 shadow-lg rounded-2xl p-8 text-center hover:shadow-xl transition-all"
-            >
+              className="bg-blue-50 shadow-lg rounded-2xl p-8 text-center hover:shadow-xl transition-all">
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <Image
                   src={item.icon}
                   alt={item.title}
                   fill
-                  className="object-contain"
+                  className="object-contain rounded-full"
                 />
               </div>
               <h3 className="text-xl font-semibold text-black mb-2">
@@ -59,6 +58,9 @@ const Features = () => {
           tailored to their interests, fostering imagination and strengthening
           the parent-child bond.
         </p>
+      </div>
+      <div className="flex justify-center mt-8">
+        <Image src="/n1.webp" alt="Hero" width={222} height={222} className="rounded-full" />
       </div>
     </section>
   );
