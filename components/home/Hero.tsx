@@ -2,10 +2,10 @@
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import cogImage from "@/public/hero/cog.png";
-import cylinderImage from "@/public/hero/cylinder.png";
-import starImage from "@/public/hero/star.png";
-import pyramidImage from "@/public/hero/pyramid.png";
+import i1 from "@/public/newhero/i1.png";
+import i2 from "@/public/newhero/i2.png";
+import i3 from "@/public/newhero/i3.png";
+import i4 from "@/public/newhero/i4.png";
 import {
   motion,
   useScroll,
@@ -37,7 +37,7 @@ const CyclingImages = () => {
           transition={{ duration: 0.5 }}
         >
           <Image
-            src={`/image${currentImage}.webp`}
+            src={`/${currentImage}.webp`}
             alt={`Hero image ${currentImage}`}
             fill
             className="object-cover rounded-3xl"
@@ -69,16 +69,16 @@ const Hero = () => {
       </div>
 
     
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_0%,rgba(147,51,234,0.3)_0%,rgba(12,30,115,0)_45%)]" />
+       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_0%,rgba(147,51,234,0.3)_0%,rgba(12,30,115,0)_45%)]" />
 
-      <motion.div
+     <motion.div
         style={{ translateY }}
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         className="absolute inset-0 pointer-events-none"
       >
         <motion.div
-          className="absolute w-[180px] h-[180px] left-[5%] top-[70%] md:w-[220px] md:h-[220px]"
+          className="absolute md:left-[1%] left-[45%] top-[35%] md:top-[50%] w-[420px] h-[420px]"
           animate={{
             translateY: [-30, 30],
           }}
@@ -90,34 +90,34 @@ const Hero = () => {
           }}
         >
           <Image
-            src={cogImage}
+            src={i1}
             alt="cog image"
             fill
             className="object-contain"
           />
         </motion.div>
 
-        <div className="absolute w-[160px] h-[160px] right-[5%] top-[70%] md:w-[200px] md:h-[200px]">
+        <div className="absolute w-[600px] h-[600px] md:right-[5%] md:top-[40%] top-[55%] right-[30%]">
           <Image
-            src={cylinderImage}
+            src={i2}
             alt="cylinder image"
             fill
             className="object-contain"
           />
         </div>
 
-        <div className="absolute w-[140px] h-[140px] right-[35%] top-[10%] rotate-[30deg] md:w-[180px] md:h-[180px] hidden md:block">
+        <div className="absolute w-[140px] h-[140px] right-[5%] top-[25%] rotate-[15deg] md:w-[180px] md:h-[180px] hidden md:block">
           <Image
-            src={starImage}
+            src={i3}
             alt="star image"
             fill
             className="object-contain"
           />
         </div>
 
-        <div className="absolute w-[140px] h-[140px] left-[35%] top-[70%] rotate-[30deg] md:w-[180px] md:h-[180px] hidden md:block">
+        <div className="absolute w-[140px] h-[140px] left-[35%] top-[70%] rotate-[5deg] md:w-[180px] md:h-[180px] block">
           <Image
-            src={pyramidImage}
+            src={i4}
             alt="pyramid image"
             fill
             className="object-contain"
