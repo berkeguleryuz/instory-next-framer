@@ -11,12 +11,12 @@ const HowItWorks = () => {
     offset: ["start end", "end start"],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [244, -122]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [355, -122]);
   return (
     <section
       id="how-it-works"
       className="min-h-[90vh] py-24 bg-[#0d0b2d] relative overflow-hidden"
-    >
+      ref={howItWorksRef}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_0%,rgba(147,51,234,0.3)_0%,rgba(12,30,115,0)_45%)]" />
 
       <motion.div
@@ -41,7 +41,7 @@ const HowItWorks = () => {
             className="object-contain"
           />
         </div>
-      </motion.div>   
+      </motion.div>
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
@@ -54,8 +54,7 @@ const HowItWorks = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto h-[400px] relative"
-        >
+          className="max-w-4xl mx-auto h-[400px] relative">
           <video
             src="/1.mp4"
             autoPlay
@@ -71,8 +70,7 @@ const HowItWorks = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm"
-          >
+            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
             <h3 className="text-xl font-semibold text-white mb-2">
               1. Share Your Child&#39;s Magic
             </h3>
@@ -85,8 +83,7 @@ const HowItWorks = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm"
-          >
+            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
             <h3 className="text-xl font-semibold text-white mb-2">
               2. Let the Magic Begin
             </h3>
@@ -99,8 +96,7 @@ const HowItWorks = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm"
-          >
+            className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
             <h3 className="text-xl font-semibold text-white mb-2">
               3. Voices of Wonder
             </h3>
