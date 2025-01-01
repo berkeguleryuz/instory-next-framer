@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     }
 
     const msg = {
-      to: "berkeguleryuz@gmail.com",
+      to: "instory@sincapp.mobi",
       from: process.env.VERIFIED_EMAIL as string,
       subject: emailSubject,
       html: emailContent,

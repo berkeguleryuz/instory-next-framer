@@ -90,7 +90,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-[#0d0b2d] mb-2">
                 Email
               </h3>
-              <p className="text-gray-600">support@instory.com</p>
+              <p className="text-gray-600">instory@sincapp.mobi</p>
             </motion.div>
 
             <motion.div
@@ -102,7 +102,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-[#0d0b2d] mb-2">
                 Phone
               </h3>
-              <p className="text-gray-600">00000</p>
+              <p className="text-gray-600">+44 7506 172102</p>
             </motion.div>
 
             <motion.div
