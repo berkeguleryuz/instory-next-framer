@@ -1,14 +1,47 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import i1 from "@/public/newhero/i1.png";
 
 const HowItWorks = () => {
+  const howItWorksRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: howItWorksRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [244, -122]);
   return (
     <section
       id="how-it-works"
       className="min-h-[90vh] py-24 bg-[#0d0b2d] relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_0%,rgba(147,51,234,0.3)_0%,rgba(12,30,115,0)_45%)]" />
+
+      <motion.div
+        style={{ translateY }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        className="absolute inset-0 pointer-events-none">
+        <div className="absolute w-[600px] h-[600px] md:left-[1%] md:top-[1%] top-[22%] left-[22%]">
+          <Image
+            src={i1}
+            alt="cylinder image"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="absolute w-[600px] h-[600px] md:right-[1%] md:top-[1%] top-[22%] right-[22%]">
+          <Image
+            src={i1}
+            alt="cylinder image"
+            fill
+            className="object-contain"
+          />
+        </div>
+      </motion.div>   
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
